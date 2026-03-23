@@ -1,0 +1,38 @@
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Editor artifacts
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Personal data — never commit completed persona files
+# (templates are fine; filled-in personal versions are not)
+*-filled.md
+*-personal.md
+my-persona/
+personal/
+output/
+completed/
+
+# API keys and credentials
+.env
+*.key
+secrets/
+
+# Temporary files
+*.tmp
+*.bak
+draft-*
+
+# Node / package managers (in case tooling is added later)
+node_modules/
+package-lock.json
+
+# Python (in case tooling is added later)
+__pycache__/
+*.pyc
+.venv/
