@@ -81,7 +81,7 @@ Understand the user's constraints, resources, and target platform. Generate a pe
 3. "Which AI platform(s) will you deploy your persona on?"
    - [ ] Claude (Claude Projects / Claude.ai)
    - [ ] Google Gemini Gem (personal, via Gemini App)
-   - [ ] Google Gemini Enterprise Agent (org-wide, via Google Workspace)
+   - [ ] Google Gemini Enterprise Agent (org-wide, via GCP Vertex AI Agent Builder)
    - [ ] ChatGPT (Custom GPT)
    - [ ] All of the above
    - [ ] Other (ask them to describe)
@@ -850,15 +850,25 @@ REFERENCE FILES TO UPLOAD:
 
 ---
 
-### For Gemini Enterprise Agent (Google Workspace)
+### For Gemini Enterprise Agent (GCP Vertex AI Agent Builder)
 
 Generate the content for `templates/persona-output-gemini-agent.md`.
+
+**This is a GCP product, not Google Workspace.** Requires a Google Cloud project with Vertex AI Agent Builder enabled.
 
 Key constraints:
 - Agent Builder system instructions: 16,000+ characters supported
 - Extends the Gem with tool use (Drive, Gmail, Calendar, web search) and grounding
-- Requires Google Workspace Business Plus or Enterprise with Gemini for Workspace
-- See `guides/gemini-enterprise-agent-setup.md` for deployment instructions
+- **Recommended: Orchestrator + Sub-Agent architecture** (see `guides/gemini-enterprise-agent-setup.md`):
+  - Orchestrator (gemini-2.5-pro): carries full persona, routes requests to sub-agents
+  - Email Sub-Agent (flash): Gmail access only, drafts in persona's voice
+  - Calendar Sub-Agent (flash): Calendar access only, scheduling
+  - Knowledge Sub-Agent (pro): Drive/data stores, answers questions
+  - Writing Sub-Agent (pro): Long-form content generation
+  - Communication Sub-Agent (flash): Chat/Spaces casual responses
+- Each sub-agent gets a SLIM persona (~500 chars: voice rules + banned words)
+- Data isolation: each sub-agent sees only what it needs (principle of least privilege)
+- 3-5x cheaper than single-agent with pro model for everything
 
 Output format:
 ```
@@ -989,7 +999,7 @@ For each platform the user works with, suggest practical integration points:
 - "Create a shared Claude Project your team can access with your persona loaded."
 - "Build a Slack bot using the Claude API that routes certain DM questions to your persona first."
 - "Record a short video of yourself answering 10 common questions — upload transcripts as persona knowledge."
-- "For Google Workspace users: deploy a Gemini Enterprise Agent so the persona is available in Google Chat org-wide. See `guides/gemini-enterprise-agent-setup.md`."
+- "For GCP users: deploy a Gemini Enterprise Agent so the persona is available in Google Chat org-wide. See `guides/gemini-enterprise-agent-setup.md`."
 - "For deep Gmail/Docs/Calendar integration: follow the Google Workspace integration guide in `guides/google-workspace-integration.md`."
 
 #### Calendar-Triggered Context
@@ -1101,6 +1111,6 @@ AIPersona/
 │   └── persona-output-chatgpt.md         # ChatGPT Custom GPT output template
 └── guides/
     ├── gemini-gem-setup.md               # Step-by-step Gemini Gem deployment guide
-    ├── gemini-enterprise-agent-setup.md  # Enterprise Agent setup (Google Workspace)
+    ├── gemini-enterprise-agent-setup.md  # Enterprise Agent setup (GCP Vertex AI)
     └── google-workspace-integration.md   # Integrating across Gmail, Docs, Sheets, etc.
 ```

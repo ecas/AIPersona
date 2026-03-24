@@ -117,7 +117,7 @@ AIPersona/
 │   └── persona-output-chatgpt.md         # Output template for ChatGPT Custom GPTs
 └── guides/
     ├── gemini-gem-setup.md               # Step-by-step Gemini Gem deployment guide
-    ├── gemini-enterprise-agent-setup.md  # Enterprise Agent (Google Workspace admin)
+    ├── gemini-enterprise-agent-setup.md  # Enterprise Agent (GCP Vertex AI Agent Builder)
     └── google-workspace-integration.md   # Integrating across Gmail, Docs, Sheets, etc.
 ```
 
