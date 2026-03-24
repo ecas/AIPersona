@@ -57,19 +57,43 @@ This methodology is grounded in peer-reviewed AI persona research:
 
 ## How to Use
 
-### Option 1: Use with an AI assistant (recommended)
+### Option 1: Install as a Claude Code Skill (fastest)
+
+```bash
+claude skill add --from https://github.com/ecas/AIPersona
+```
+
+Then run:
+```
+/ai-persona
+```
+
+Claude Code guides you through the entire process conversationally — psychometric tests, communication style analysis, interview protocol, and persona deployment. Everything happens inside your terminal.
+
+### Option 2: Install as a Gemini CLI Skill
+
+```bash
+gemini skill add --from https://github.com/ecas/AIPersona
+```
+
+Then run:
+```
+/ai-persona
+```
+
+### Option 3: Manual setup (any AI assistant)
 
 1. Open Claude, Gemini, or ChatGPT
-2. Paste `SKILL.md` as your system prompt or first message
+2. Copy the contents of `SKILL.md` and paste as your system prompt or first message
 3. The AI will guide you through the process conversationally
 
-### Option 2: Self-guided
+### Option 4: Self-guided (no AI)
 
 1. Work through `SKILL.md` yourself, section by section
 2. Use the templates in `/templates/` to collect and organize your data
-3. Generate your system prompts manually using the templates
+3. Generate your system prompts manually using the output templates
 
-### Option 3: Run with a partner
+### Option 5: Run with a partner
 
 Have someone who knows you well act as interviewer for Phase 3. The interview sessions produce better results when you can't see the questions in advance.
 
