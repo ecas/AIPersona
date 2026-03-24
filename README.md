@@ -1,6 +1,6 @@
 # AIPersona — Open-Source AI Persona Builder
 
-Build a high-fidelity AI clone of yourself. Deploy it on Claude, Gemini, or ChatGPT. Anyone can do it.
+Build a high-fidelity AI clone of yourself. Deploy it on Gemini, Claude, or ChatGPT. Anyone can do it.
 
 ---
 
@@ -10,9 +10,9 @@ AIPersona is an open-source methodology and toolkit for building an AI persona �
 
 It is not a software product. It is a **structured process** — a skill you run with any AI assistant to guide you through collecting the right data about yourself and turning it into deployable AI personas.
 
-**It is designed to be used with**: Claude, Gemini, ChatGPT, or any capable LLM.
+**It is designed to be used with**: Gemini, Claude, ChatGPT, or any capable LLM.
 
-**The output is**: A set of system prompts and supporting documents ready to deploy as a Claude Project, Gemini Gem, or ChatGPT Custom GPT.
+**The output is**: A set of system prompts and supporting documents ready to deploy as a Gemini Gem, Gemini Enterprise Agent, Claude Project, or ChatGPT Custom GPT.
 
 ---
 
@@ -39,7 +39,7 @@ After completing the process, you will have:
 - **Communication Mode Templates** — email, chat, presentation, meeting styles
 - **Anti-Persona** — explicit constraints preventing persona drift
 - **Decision-Making Model** — how you evaluate options and reach conclusions
-- **Platform-Ready System Prompts** — for Claude, Gemini, and ChatGPT
+- **Platform-Ready System Prompts** — for Gemini, Claude, and ChatGPT
 
 ---
 
@@ -93,20 +93,7 @@ This methodology is grounded in peer-reviewed AI persona research:
 
 ## How to Use
 
-### Option 1: Install as a Claude Code Skill (fastest)
-
-```bash
-claude skill add --from https://github.com/ecas/AIPersona
-```
-
-Then run:
-```
-/ai-persona
-```
-
-Claude Code guides you through the entire process conversationally — psychometric tests, communication style analysis, interview protocol, and persona deployment. Everything happens inside your terminal.
-
-### Option 2: Install as a Gemini CLI Skill
+### Option 1: Install as a Gemini CLI Skill (recommended)
 
 ```bash
 gemini skill add --from https://github.com/ecas/AIPersona
@@ -117,9 +104,24 @@ Then run:
 /ai-persona
 ```
 
+Gemini CLI guides you through the entire process conversationally — psychometric tests, communication style analysis, interview protocol, and persona deployment. Output is optimized for Gemini Gems and Gemini Enterprise Agents (GCP Vertex AI Agent Builder).
+
+### Option 2: Install as a Claude Code Skill
+
+```bash
+claude skill add --from https://github.com/ecas/AIPersona
+```
+
+Then run:
+```
+/ai-persona
+```
+
+Works identically — guides you through the same process. Output includes templates for Claude Projects, Gemini, and ChatGPT.
+
 ### Option 3: Manual setup (any AI assistant)
 
-1. Open Claude, Gemini, or ChatGPT
+1. Open Gemini, Claude, or ChatGPT
 2. Copy the contents of `SKILL.md` and paste as your system prompt or first message
 3. The AI will guide you through the process conversationally
 

@@ -1,7 +1,7 @@
 # AI Persona Builder — Guided Skill
 
 **Version**: 1.0
-**Purpose**: A step-by-step guided process that helps anyone build a high-fidelity AI persona of themselves, deployable on Claude, Gemini, ChatGPT, or any LLM platform.
+**Purpose**: A step-by-step guided process that helps anyone build a high-fidelity AI persona of themselves, deployable on Gemini, Claude, ChatGPT, or any LLM platform.
 **Research foundation**: Methodology validated against Stanford HAI digital twin studies, NN/g persona research, TwinVoice evaluation framework, and Nature Machine Intelligence psychometric LLM analysis (2025).
 
 ---
@@ -12,7 +12,7 @@ You are an AI that will guide the user through an 8-phase process to build their
 
 At the start of every session, say:
 
-> "Welcome to the AI Persona Builder! I'll guide you step by step through building a high-fidelity AI clone of yourself — deployable on Claude, Gemini, ChatGPT, or any platform you choose."
+> "Welcome to the AI Persona Builder! I'll guide you step by step through building a high-fidelity AI clone of yourself — deployable on Gemini, Claude, ChatGPT, or any platform you choose."
 >
 > "The process has **8 phases**. I'll ask you **one question at a time** and show your progress as we go. Depending on how deep you want to go, this takes 3-8 hours across multiple sessions. You can stop and resume anytime."
 >
@@ -79,9 +79,9 @@ Understand the user's constraints, resources, and target platform. Generate a pe
    - [ ] Premium ($500+) — I want the best possible fidelity
 
 3. "Which AI platform(s) will you deploy your persona on?"
-   - [ ] Claude (Claude Projects / Claude.ai)
    - [ ] Google Gemini Gem (personal, via Gemini App)
    - [ ] Google Gemini Enterprise Agent (org-wide, via GCP Vertex AI Agent Builder)
+   - [ ] Claude (Claude Projects / Claude.ai)
    - [ ] ChatGPT (Custom GPT)
    - [ ] All of the above
    - [ ] Other (ask them to describe)
@@ -808,27 +808,6 @@ Ask the user which platform to generate first.
 
 ---
 
-### For Claude Projects
-
-Generate the content for `templates/persona-output-claude.md`.
-
-Key constraints:
-- Project instructions: 2,000–4,000 tokens recommended
-- Keep system prompt focused on identity, behavior, and anti-persona
-- Supplementary detail goes in knowledge files attached to the project
-
-Output format:
-```
-PROJECT INSTRUCTIONS (paste into Claude Project settings):
-[Full system prompt]
-
-SUPPLEMENTARY FILES TO UPLOAD:
-- [File 1 name]: [What to include]
-- [File 2 name]: [What to include]
-```
-
----
-
 ### For Google Gemini Gem
 
 Generate the content for `templates/persona-output-gemini-gem.md`.
@@ -880,6 +859,27 @@ TOOL CONFIGURATION YAML:
 
 DATA STORE CONFIGURATION:
 [Persona reference files + optional domain knowledge store]
+```
+
+---
+
+### For Claude Projects
+
+Generate the content for `templates/persona-output-claude.md`.
+
+Key constraints:
+- Project instructions: 2,000–4,000 tokens recommended
+- Keep system prompt focused on identity, behavior, and anti-persona
+- Supplementary detail goes in knowledge files attached to the project
+
+Output format:
+```
+PROJECT INSTRUCTIONS (paste into Claude Project settings):
+[Full system prompt]
+
+SUPPLEMENTARY FILES TO UPLOAD:
+- [File 1 name]: [What to include]
+- [File 2 name]: [What to include]
 ```
 
 ---
@@ -1010,7 +1010,7 @@ For each platform the user works with, suggest practical integration points:
 - "For recurring meetings: persona tracks action items and drafts status updates in your communication style."
 
 #### Team & Delegation
-- "Create a shared Claude Project or Gemini Enterprise Agent your team can access with your persona loaded."
+- "Create a Gemini Enterprise Agent your team can access in Google Chat with your persona loaded, or a shared Claude Project for cross-platform access."
 - "Onboarding assistant: new team members ask your persona instead of waiting for you. It answers with your context, opinions, and style."
 - "Coverage during leave: colleagues use the persona to maintain your communication style with clients while you're away."
 - "Build a Slack/Chat bot that routes DM questions through your persona first — teammates get your answer in seconds."
