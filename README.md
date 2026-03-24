@@ -108,6 +108,7 @@ AIPersona/
 ├── LICENSE                               # MIT License
 ├── templates/
 │   ├── anonymization-prompt.md           # How to anonymize work data safely
+│   ├── communication-analysis-prompts.md # 7 ready-to-paste prompts for corporate AI tools (Gemini/Copilot)
 │   ├── style-extraction-template.md      # Writing style capture form
 │   ├── interview-protocol.md             # All 37 interview questions (standalone)
 │   ├── persona-output-gemini-gem.md      # Output template for Gemini Gems
