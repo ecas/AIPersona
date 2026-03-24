@@ -43,6 +43,42 @@ After completing the process, you will have:
 
 ---
 
+## What You Can Do With Your Persona
+
+Once built, your AI persona becomes a practical tool across your entire workflow:
+
+### Email & Communication
+- **Draft replies in your voice** — Persona reads incoming emails and generates replies that sound like you wrote them. Deploy via Gemini in Gmail, Workspace Studio, or as a Gemini Enterprise Agent with Gmail access.
+- **Prepare meeting follow-ups** — After a meeting, the persona drafts follow-up emails to each participant in the right tone (formal for clients, casual for teammates).
+- **Handle routine correspondence** — Auto-draft responses to scheduling requests, FYI emails, and standard inquiries. You just review and send.
+
+### Knowledge & Decision Support
+- **Answer complex questions with your expertise** — Persona grounded in your Google Drive, support docs, and local knowledge base. Colleagues ask it questions and get answers in your voice, backed by your actual documents.
+- **Pre-meeting briefs** — Before each meeting, the persona pulls relevant Drive docs, previous email threads, and your notes about the attendees to prepare a brief in your style.
+- **Technical advisory** — Team members get your opinion on architecture decisions, code reviews, or strategy questions even when you're offline.
+
+### Career & Professional Development
+- **Generate a personalized CV** — Give the persona a job description and it writes a tailored CV emphasizing the right experience, using your actual career narrative and communication style. Different from generic AI because it knows your strengths, your vocabulary, and how you position yourself.
+- **Interview preparation** — Persona generates likely interview questions for a specific role and drafts answers in your voice using your real STAR stories from the interview protocol.
+- **LinkedIn content** — Draft thought leadership posts in your authentic voice. No AI-isms, no corporate jargon — just your perspective on topics you care about.
+
+### Team & Organization
+- **Onboarding assistant** — New team members ask your persona questions instead of waiting for you. It answers with your context, your opinions, and your communication style.
+- **Delegate without losing voice** — When someone covers for you (vacation, leave), they can use the persona to maintain your communication style with clients and stakeholders.
+- **Consistent client communication** — Multiple team members can use the persona to ensure client-facing communication matches your established tone and terminology.
+
+### Personal Productivity
+- **Writing assistant** — Drafts documents, proposals, and presentations in your voice. You edit instead of writing from scratch — 3-5x faster.
+- **Decision journal** — Persona helps you reason through decisions using your own documented decision-making model and mental frameworks.
+- **Second brain Q&A** — Ask the persona questions about your own knowledge base, notes, and past decisions. It retrieves and answers in your voice.
+
+### Advanced (Orchestrator + Sub-Agents on GCP)
+- **Full AI Chief of Staff** — Orchestrator routes requests to specialized sub-agents: email agent drafts replies, calendar agent manages scheduling, knowledge agent searches your docs, writing agent produces content — all in your voice, with data isolation between agents.
+- **Automated daily briefing** — Morning summary of emails needing response, calendar conflicts, Drive docs updated by collaborators — synthesized in your communication style.
+- **Proactive notifications** — Agent monitors your data sources and alerts you when something needs your attention, using your own priority framework.
+
+---
+
 ## Research Foundation
 
 This methodology is grounded in peer-reviewed AI persona research:

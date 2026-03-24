@@ -981,33 +981,54 @@ Help the user embed their persona into their daily workflow rather than just hav
 
 For each platform the user works with, suggest practical integration points:
 
-#### Email Composition
-- "In Gmail, create a custom label 'Draft with AI Persona' for emails you want to write in your voice."
-- "Use the Claude/Gemini API in Google Workspace to add a 'Compose as me' button."
-- "Create a Shortcut keyboard macro that opens your persona with a pre-loaded email drafting prompt."
+#### Email — Draft Replies in Your Voice
+- "Deploy your persona as a Gemini Enterprise Agent with Gmail access. It reads incoming emails and generates reply drafts that sound like you."
+- "Use Google Workspace Studio to build a 'Reply as Me' workflow: incoming email → persona generates draft → saves to Drafts folder → you review and send."
+- "For Claude: paste the email thread into your persona Project and say 'Draft a reply.' Edit for 30 seconds instead of writing for 10 minutes."
+- "Set up automated first-draft replies for routine categories: scheduling, FYI acknowledgments, standard inquiries. You just review and hit send."
+
+#### Knowledge & Decision Support
+- "Ground the persona in your Google Drive + support materials. Colleagues ask it questions and get answers in your voice, backed by your actual documents."
+- "Build a 'Second Brain Q&A' agent: persona searches your Drive, Confluence, Notion, or local docs and answers as if you were explaining it yourself."
+- "For GCP: deploy as an Orchestrator with a Knowledge Sub-Agent (gemini-2.5-pro + Drive data store). Team members ask complex questions in Chat and get your expert opinion even when you're offline."
+- "Pre-meeting briefs: persona pulls relevant Drive docs, previous email threads, and your notes about attendees to prepare a brief in your style."
+
+#### Career & Professional Development
+- "Generate a personalized CV: give the persona a job description and it writes a tailored CV using your actual career narrative, psychometric strengths, and how you naturally position yourself. Different output for every role — automatically emphasizes the right experience."
+- "Interview prep: persona generates likely questions for a specific role and drafts answers in your voice using your real STAR stories from the interview protocol."
+- "Salary negotiation: persona drafts your negotiation talking points using your documented decision-making model and communication style."
+- "LinkedIn thought leadership: persona drafts posts in your authentic voice — no AI-isms, no corporate jargon. Review and publish in 5 minutes."
 
 #### Document Writing
 - "In Google Docs, use Gemini sidebar with your Gem active to get first drafts in your voice."
-- "For Claude: keep your persona Project active and use it for all long-form document drafting."
-- "Save a reusable prompt: 'Write a [document type] about [topic] in my voice. Reference my style guide.'"
+- "Proposals and presentations: persona writes the first draft using your structure preferences, vocabulary, and argument style. You edit instead of starting from blank page — 3-5x faster."
+- "Technical docs: persona explains complex topics the way YOU explain them (analogies, depth level, jargon tolerance all calibrated)."
 
-#### Meeting Preparation
-- "Before any meeting: send the persona the agenda and ask 'How would I approach this meeting?'"
-- "After meetings: paste notes in and ask 'Summarize this as I would write it in a follow-up email.'"
+#### Meeting Intelligence
+- "Before meetings: persona generates a brief with attendee context, your relationship history, and suggested talking points."
+- "After meetings: paste transcript and say 'Write follow-up emails to each participant in my voice.' Persona adjusts tone per recipient (formal for executives, casual for peers)."
+- "For recurring meetings: persona tracks action items and drafts status updates in your communication style."
 
-#### Team-Facing Use Cases
-- "Create a shared Claude Project your team can access with your persona loaded."
-- "Build a Slack bot using the Claude API that routes certain DM questions to your persona first."
-- "Record a short video of yourself answering 10 common questions — upload transcripts as persona knowledge."
-- "For GCP users: deploy a Gemini Enterprise Agent so the persona is available in Google Chat org-wide. See `guides/gemini-enterprise-agent-setup.md`."
-- "For deep Gmail/Docs/Calendar integration: follow the Google Workspace integration guide in `guides/google-workspace-integration.md`."
+#### Team & Delegation
+- "Create a shared Claude Project or Gemini Enterprise Agent your team can access with your persona loaded."
+- "Onboarding assistant: new team members ask your persona instead of waiting for you. It answers with your context, opinions, and style."
+- "Coverage during leave: colleagues use the persona to maintain your communication style with clients while you're away."
+- "Build a Slack/Chat bot that routes DM questions through your persona first — teammates get your answer in seconds."
 
-#### Calendar-Triggered Context
-- "For high-stakes meetings, prompt the persona with: 'I have a [meeting type] with [audience type] in 30 minutes. What's my opening line?'"
+#### Workspace Studio Workflows
+- "Build an email triage workflow: incoming mail → persona classifies priority → drafts replies for routine emails → flags important ones for your review."
+- "Client proposal generator: sales team inputs client details → persona generates a tailored proposal in your voice using your standard structure."
+- "Weekly report automation: persona reads your team's updates from Sheets/Docs → synthesizes a summary in your writing style → emails stakeholders."
+
+#### Advanced GCP Deployment (Orchestrator + Sub-Agents)
+- "Deploy the full AI Chief of Staff: orchestrator routes to specialized sub-agents (email, calendar, knowledge, writing, communication) — all in your voice, with data isolation."
+- "Automated morning briefing: agent scans overnight emails, calendar conflicts, and Drive activity → synthesizes a 200-word brief → delivers to your inbox or Chat at 8 AM."
+- "Proactive monitoring: agent watches data sources and alerts you when something needs attention, using your own priority framework to decide what matters."
 
 #### Content Creation
-- "Whenever you need to write a LinkedIn post, email newsletter, or blog post — start with the persona as co-author."
-- "Use your persona to write first drafts and then edit. It's faster than writing from scratch."
+- "Medium articles, LinkedIn posts, email newsletters — start with the persona as co-author. It writes the first draft, you add the human touches."
+- "Repurpose content: paste a long article and say 'Adapt this for LinkedIn' — persona condenses, changes the hook, adjusts format. Different platform, same voice."
+- "Content calendar: persona suggests topics based on your expertise areas, trending conversations, and your stated content pillars."
 
 ---
 
