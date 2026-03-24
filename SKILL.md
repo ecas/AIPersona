@@ -23,13 +23,30 @@ Understand the user's constraints, resources, and target platform. Generate a pe
 
 ### Questions to Ask (one by one, conversationally)
 
-1. "What's your budget for personality assessments?"
+1. "Do you already have results from any personality or psychometric tests?"
+   Examples to ask about:
+   - [ ] Gallup CliftonStrengths (often provided by employers)
+   - [ ] Everything DiSC (common in corporate training programs)
+   - [ ] Myers-Briggs / 16Personalities
+   - [ ] IPIP Big Five / NEO-PI
+   - [ ] Thomas-Kilmann TKI (conflict style)
+   - [ ] VIA Character Strengths
+   - [ ] Hogan HPI / HDS
+   - [ ] StrengthsFinder
+   - [ ] Enneagram
+   - [ ] EQ / Emotional Intelligence assessment
+   - [ ] Other (ask them to name it)
+   - [ ] None — starting from scratch
+
+   **Why this matters:** Many people already have 1-3 tests from work or school. Each existing test saves $40-200 AND 15-40 minutes. Map existing results before recommending new tests.
+
+2. "What's your budget for NEW assessments (beyond what you already have)?"
    - [ ] Free ($0) — I'll use only free tools
    - [ ] Budget ($50–100) — willing to spend a little for quality
    - [ ] Professional ($200–500) — serious about getting this right
    - [ ] Premium ($500+) — I want the best possible fidelity
 
-2. "Which AI platform(s) will you deploy your persona on?"
+3. "Which AI platform(s) will you deploy your persona on?"
    - [ ] Claude (Claude Projects / Claude.ai)
    - [ ] Google Gemini Gem (personal, via Gemini App)
    - [ ] Google Gemini Enterprise Agent (org-wide, via Google Workspace)
@@ -61,11 +78,20 @@ After collecting answers, output a roadmap like this:
 ```
 == YOUR PERSONALIZED PERSONA BUILDING ROADMAP ==
 
-Budget tier:        [Budget]
+Existing tests:     [List of tests already completed — these are FREE data!]
+Budget for new:     [Budget]
 Target platform(s): [Platforms]
 Data available:     [Data availability]
 Languages:          [Languages]
 Primary use case:   [Use case]
+
+TESTS YOU CAN SKIP (already have):
+- [Test name] ✓ — covers [dimension]. Paste results in Phase 1.
+
+TESTS STILL NEEDED (recommended):
+- [Test name] — $[cost] / [time] — covers [missing dimension]
+
+ESTIMATED SAVINGS FROM EXISTING TESTS: $[amount] and [time] saved
 
 RECOMMENDED PATH:
 Phase 1: Psychometric Foundation    (~[X] hours, [cost])
@@ -92,7 +118,29 @@ Build the identity layer — WHO the person is at a deep behavioral level. This 
 
 **Key research finding**: Cross-referencing multiple instruments eliminates the noise from any single test. Require evidence from at least 3 instruments before treating any trait as confirmed.
 
-### Present the Recommended Test Stack by Budget
+### First: Process Existing Test Results
+
+If the user reported existing tests in Phase 0, process them NOW before recommending new ones:
+
+1. Ask them to paste or upload each existing test result
+2. For each, extract:
+   - Primary traits/scores
+   - Behavioral patterns
+   - Communication style indicators
+   - Strengths and blind spots
+3. Map which persona dimensions are already covered:
+   - [ ] Core personality traits (Big Five / HEXACO / 16P)
+   - [ ] Workplace behavior style (DiSC / MBTI)
+   - [ ] Strengths & motivations (Gallup / VIA)
+   - [ ] Conflict style (TKI)
+   - [ ] Emotional intelligence (EQ assessments)
+   - [ ] Dark-side / under-stress behavior (Hogan)
+4. Identify GAPS — which dimensions are NOT yet covered
+5. Recommend ONLY the tests needed to fill gaps
+
+**Example**: If someone has Gallup CliftonStrengths (covers strengths/motivations) + DiSC (covers workplace behavior), they only need: IPIP Big Five (core personality) + a conflict style test. That saves ~$155 and 45 minutes.
+
+### Then: Recommend Remaining Tests by Budget
 
 #### FREE Tier ($0) — "The Scrappy Persona"
 **Estimated time**: 2.5–3.5 hours total
